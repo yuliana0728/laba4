@@ -1,0 +1,24 @@
+class Employee:
+    __name = None
+    __salary = None
+    __age = None
+
+    def __init__(self, name, salary, age):
+        self.__name = name
+        self.__salary = salary
+        self.__age = age
+
+    def show(self):
+        return self.__name
+
+    def show1(self):
+        return self.__salary
+
+    def show2(self):
+        return self.__age
+
+employee = Employee('josh', 3000, 27)
+
+print(employee.show())
+print(employee.show1())
+print(employee.show2())
