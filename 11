@@ -1,0 +1,4 @@
+class Employee:
+    def __init__(self, name, salary):
+        print(name + ' ' + salary)
+u =  Employee('john', '3000$')
