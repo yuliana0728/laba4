@@ -1,0 +1,34 @@
+class Employee:
+    __name = None
+    __salary =None
+    __age = None
+
+    def __init__(self, name, salary, age):
+        self.__name = name
+        self.__salary = salary
+        self.age = age
+
+    def getName(self):
+        return self.__name
+
+    def getSal(self):
+        return str(self.__salary) + '$'
+
+    def getAge(self):
+        return self.__age
+
+    def setAge(self, age):
+        if 0 <= age <= 120:
+            self.__age = age
+        else:
+            print("Ошибка")
+
+    age = property(getAge, setAge)
+employee = Employee("josh", 3000, 27)
+print(employee.getName())
+print(employee.getSal())
+print(employee.age)
+employee.age = 30
+print(employee.age)
+employee.age = 150
+print(employee.age)
